@@ -1,0 +1,14 @@
+func changeButtonOrImageColor<T>(uiColor:UIColor,imageName:String,type:T) -> T {
+  let image:UIImage? = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
+  if let btn = type as? UIButton {
+    btn.setImage(image, for: .normal)
+    btn.tintColor = uiColor
+    return btn as! T
+  } else {
+    let imageView = type as? UIImageView
+    let tintableImage = closeImage?.withRenderingMode(.alwaysTemplate)
+    imageView?.image = tintableImage
+    imageView?.tintColor = uiColor
+    return imageView as! T
+  }
+}

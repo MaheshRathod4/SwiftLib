@@ -13,8 +13,8 @@ func changeButtonOrImageColor<T>(uiColor:UIColor,imageName:String,type:T) -> T {
   }
 }
 
-// UIButton Example
-btnCall = changeButtonOrImageColor(uiColor:UIColor.red,imageName:"Call",type:btnCall)
+// UIButton Example 
+btnCall = changeButtonOrImageColor(uiColor:UIColor.red,imageName:"Your ImageName",type:btnCall)
 
 // UIImageView Example
-imgCall = changeButtonOrImageColor(uiColor:UIColor.systemBlue,imageName:"Call",type:imgCall)
+imgCall = changeButtonOrImageColor(uiColor:UIColor.red,imageName:"Your ImageName",type:imgCall)

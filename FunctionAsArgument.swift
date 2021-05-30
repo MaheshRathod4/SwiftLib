@@ -16,5 +16,14 @@ func checkoutUsingGeneric<T>(finalPrice:T) {
 
 checkoutUsingGeneric(finalPrice:calculatePrice(price:2000,discount:5))
 
-//Using Clouser
+//Using Closure
 
+typealias Function = () -> Int
+
+func checkoutUsingClosure(function:@escaping Function) {
+    print(function())
+}
+
+checkoutUsingClosure { () -> Int in
+    return calculatePrice(price: 2000, discount: 5)
+}
